@@ -5,6 +5,7 @@ Description:
 Used Map Reduce Techniques in Python.
 
 BACKGROUND.
+
 From the window you can see the sun shining in a lovely spring morning.
 Its Monday, 10am, and you are in the open plan office of a new start-up, OptimiseYourJourney,
 which will enter the market next year with a clear goal in mind: “leverage Big Data-based
