@@ -76,7 +76,21 @@ def process_line(line):
 # FUNCTION my_main
 # ------------------------------------------
 def my_main(input_folder, output_file, top_n_bikes):
-    pass
+    # Task:
+    # Compute the top_n_bikes with highest total duration time for their trips.
+    # (02) trip_duration
+    # (11) bike_id
+
+    # result
+    res = ""
+
+    # Create a dictionary to store the top n bikes
+    top_bikes = {}
+
+    # Output the result for the top n bikes (write n amount of lines)
+    # bike_id \t (total_duration_time_for_their_trips, total_number_of_trips) \n
+    for i in range(top_n_bikes):
+        pass
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
