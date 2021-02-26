@@ -85,12 +85,58 @@ def my_main(input_folder, output_file, top_n_bikes):
     res = ""
 
     # Create a dictionary to store the top n bikes
-    top_bikes = {}
+    bike_id_duration = {}
+    bike_id_trips = {}
 
+    # File names for each file in the input folder
+    data_filename = os.listdir(input_folder)
+
+    # For a file in the input folder
+    for filename in data_filename:
+        # Open the file
+        data_file = open(input_folder + "\\" + filename, "r")
+
+        # For a line in that folder
+        for line in data_file.readlines():
+            # Read all the attributes
+            attributes = process_line(line)
+
+            # If the bike id is a key already
+            if attributes[11] in bike_id_duration:
+                # Add to the total duration for the bike id
+                bike_id_duration[attributes[11]] += attributes[2]
+                # Add to the total amount of trips for the bike id
+                bike_id_trips[attributes[11]] += 1
+            # If it isn't, set it as a key to both dictionaries and set their values to zero
+            else:
+                bike_id_duration[attributes[11]] = 0
+                bike_id_trips[attributes[11]] = 0
+
+        # Close the file
+        data_file.close()
+
+        # break
+
+    # This will sort the dictionary by value in descending order.
+    # It returns a list of tuples with the key by index 0 and the value being index 1
+    # The syntax of sorted is sorted(object, key, reverse)
+    # Object is just the list/tuple/dictionary and reverse just means reverse the list
+    # key is the important part as it alllows you to set a function for custom sorting
+    # That is why lambda is here as we are specififying to sort the tuple of the dictionary based on its values
+    # Remember that dictionary.items() returns a tuple of (key, value)
+    # sorted_duration is a list of tuples
+    sorted_duration = sorted(bike_id_duration.items(), key=lambda x: x[1], reverse=True)
+    
+    # print(sorted_duration[0])
+    
     # Output the result for the top n bikes (write n amount of lines)
     # bike_id \t (total_duration_time_for_their_trips, total_number_of_trips) \n
     for i in range(top_n_bikes):
-        pass
+        # This looks messy but it makes sense
+        # sorted_duration[i][0] = the 0 index of a tuple in sorted duration is its bike id
+        # sorted_duration[i][1] = the 1 index of a tuple in sorted duration is its total duration
+        res = str(sorted_duration[i][0]) + "\t(" + str(sorted_duration[i][1]) + ", " + str(bike_id_trips[sorted_duration[i][0]]) + ")\n"
+        print(res)
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
