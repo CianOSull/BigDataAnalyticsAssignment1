@@ -83,6 +83,14 @@ def my_main(input_folder, output_file, bike_id):
     # service, and the trips done by-truck are not logged into the dataset. Compute all the
     # times a given bike_id was moved by the truck re-balancing system.
 
+    # (03) start_station_id
+    # (07) stop_station_id
+
+    # (04) start_station_name
+    # (08) stop_station_name
+
+    # (01) stop_time
+
     # Output variable
     res = ""
 
@@ -94,17 +102,39 @@ def my_main(input_folder, output_file, bike_id):
         # Open the file
         data_file = open(input_folder + filename, "r")
 
+        prev_end_station_id = 0
+        prev_end_station_log = 0
+
         # For a line in that folder
         for line in data_file.readlines():
             # Read all the attributes
             attributes = process_line(line)
 
-            # If the bike id is a key already
-            if attributes[11] in "bike_id_duration":
-                pass
-            # If it isn't, set it as a key to both dictionaries and set their values to zero
-            else:
-                pass
+            # This will previous store the station id as the key and the log time as the value
+            first_station_info = {}
+
+            # This will current store the station id as the key and the log time as the value
+            second_station_info = {}
+
+            # if attributes[11] == bike_id:
+            #     print("="*50)
+            #     print("Bike Id:", bike_id)
+            #     print("Start Station Id:", attributes[3], "Start Station name:", attributes[4])
+            #     print("End Station Id:", attributes[7], "End Station name:", attributes[8])
+            #     print("="*50)
+
+            if attributes[11] == bike_id:
+                if (attributes[7] != prev_end_station_id) and (prev_end_station_id != 0):
+                    print("Truck was used:")
+                    print("Previous end station:", prev_end_station_id)
+                    print("Previous end station time:", prev_end_station_log)
+                    print("New end station:", attributes[7])
+                    print("New end station time:", attributes[1])
+
+                prev_end_station_id = attributes[7]
+                prev_end_station_log = attributes[1]
+
+
 
         # Close the file
         data_file.close()
@@ -120,16 +150,16 @@ def my_main(input_folder, output_file, bike_id):
     # By_Truck \t (2019/05/10 10:00:00, Station2, 2019/05/10 11:00:00, Station3) \n
     for i in range(10):
         # Open the outfile
-        output = open(output_file, "a")
+        # output = open(output_file, "a")
 
         #
         res = ""
 
         # Output to file
-        output.write(res)
+        # output.write(res)
 
         # Close output file
-        output.close()
+        # output.close()
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
