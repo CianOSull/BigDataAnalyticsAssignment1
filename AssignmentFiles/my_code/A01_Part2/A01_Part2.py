@@ -109,8 +109,8 @@ def my_main(input_folder, output_file, top_n_bikes):
                 bike_id_trips[attributes[11]] += 1
             # If it isn't, set it as a key to both dictionaries and set their values to zero
             else:
-                bike_id_duration[attributes[11]] = 0
-                bike_id_trips[attributes[11]] = 0
+                bike_id_duration[attributes[11]] = attributes[2]
+                bike_id_trips[attributes[11]] = 1
 
         # Close the file
         data_file.close()
