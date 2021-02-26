@@ -172,15 +172,30 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part3/A01_Part3.py</url>
-          <line>123</line>
-          <option name="timeStamp" value="4" />
+          <line>176</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part3/A01_Part3.py</url>
-          <line>126</line>
-          <option name="timeStamp" value="5" />
+          <line>132</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part3/A01_Part3.py</url>
+          <line>137</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part3/A01_Part3.py</url>
+          <line>129</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="first_station_names" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
