@@ -77,7 +77,113 @@ def process_line(line):
 # FUNCTION my_main
 # ------------------------------------------
 def my_main(input_folder, output_file, bike_id):
-    pass
+    # Task:
+    # Sometimes bikes are re-organised (moved) from station A to station B to balance the
+    # amount of bikes available in both stations. A truck operates this bike re-balancing
+    # service, and the trips done by-truck are not logged into the dataset. Compute all the
+    # times a given bike_id was moved by the truck re-balancing system.
+
+    # (03) start_station_id
+    # (07) stop_station_id
+
+    # (04) start_station_name
+    # (08) stop_station_name
+
+    # (01) stop_time
+
+    # Output variable
+    res = ""
+
+    # File names for each file in the input folder
+    data_filename = os.listdir(input_folder)
+
+    # This will previous store the station name as the key and the log time as the value
+    # first_station_info = {}
+
+    # This will current store the station name as the key and the log time as the value
+    # second_station_info = {}
+
+    # Using four lists to store the values because they can store duplicates.
+    # Dictionaries can't store keys.
+    first_station_names = []
+    first_station_times = []
+
+    second_station_names = []
+    second_station_times = []
+
+    # Set hte previous varibles to be nothing by default
+    prev_end_station_id = 0
+    prev_end_station_log = 0
+    prev_end_station_name = ""
+
+    # For a file in the input folder
+    for filename in data_filename:
+        # Open the file
+        data_file = open(input_folder + filename, "r")
+
+        # For a line in that folder
+        for line in data_file.readlines():
+            # Read all the attributes
+            attributes = process_line(line)
+
+            if attributes[11] == bike_id:
+                # if previous station id is 0 then there isn't a previous station yet
+                if (prev_end_station_id != 0) and (attributes[3] != prev_end_station_id):
+                    # Store station information in the dictioanry
+                    # Store the previous stations name as key and time as value
+                    # first_station_info[prev_end_station_name] = prev_end_station_log
+                    first_station_names.append(prev_end_station_name)
+                    first_station_times.append(prev_end_station_log)
+                    
+                    # Store the current stations name as key and time as value
+                    # second_station_info[attributes[4]] = attributes[0]
+                    second_station_names.append(attributes[4])
+                    second_station_times.append(attributes[0])
+
+                    # print("Truck was used:")
+                    # print("Previous end station:", prev_end_station_id)
+                    # print("Previous end station time:", prev_end_station_log)
+                    # print("New start station:", attributes[3])
+                    # print("New start station time:", attributes[0])
+
+                prev_end_station_id = attributes[7]
+                prev_end_station_name = attributes[8]
+                prev_end_station_log = attributes[1]
+
+        # Close the file
+        data_file.close()
+
+    # Delete the output file if it exists
+    if os.path.exists(output_file):
+        os.remove(output_file)
+
+    # Create lists of the keys and values to make it easier to print htem at once
+    # first_station_names = list(first_station_info.keys())
+    # first_station_times = list(first_station_info.values())
+    # 
+    # second_station_names = list(second_station_info.keys())
+    # second_station_times = list(second_station_info.values())
+
+    # Output the result
+    # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
+    # station3_id) \n
+    # Second maybe output?
+    # By_Truck \t (2019/05/10 10:00:00, Station2, 2019/05/10 11:00:00, Station3) \n
+    for i in range(len(first_station_names)):
+        # Open the outfile
+        output = open(output_file, "a")
+
+        # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
+        # station3_id) \n
+        res = "By_Truck \t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + \
+              str(second_station_times[i]) + ", " + str(second_station_names[i]) + ")\n"
+        # print(res)
+
+        # Output to file
+        output.write(res)
+
+        # Close output file
+        output.close()
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
