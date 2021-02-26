@@ -101,7 +101,7 @@ def my_main(input_folder, output_file):
     # For a file in the input folder
     for filename in data_filename:
         # Open the file
-        data_file = open(input_folder + "\\" + filename, "r")
+        data_file = open(input_folder + filename, "r")
 
         # For a line in that folder
         for line in data_file.readlines():

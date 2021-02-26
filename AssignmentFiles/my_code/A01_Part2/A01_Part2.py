@@ -94,7 +94,7 @@ def my_main(input_folder, output_file, top_n_bikes):
     # For a file in the input folder
     for filename in data_filename:
         # Open the file
-        data_file = open(input_folder + "\\" + filename, "r")
+        data_file = open(input_folder + filename, "r")
 
         # For a line in that folder
         for line in data_file.readlines():
@@ -115,14 +115,12 @@ def my_main(input_folder, output_file, top_n_bikes):
         # Close the file
         data_file.close()
 
-        # break
-
     # This will sort the dictionary by value in descending order.
     # It returns a list of tuples with the key by index 0 and the value being index 1
     # The syntax of sorted is sorted(object, key, reverse)
     # Object is just the list/tuple/dictionary and reverse just means reverse the list
-    # key is the important part as it alllows you to set a function for custom sorting
-    # That is why lambda is here as we are specififying to sort the tuple of the dictionary based on its values
+    # key is the important part as it allows you to set a function for custom sorting
+    # That is why lambda is here as we are specifying to sort the tuple of the dictionary based on its values
     # Remember that dictionary.items() returns a tuple of (key, value)
     # sorted_duration is a list of tuples
     sorted_duration = sorted(bike_id_duration.items(), key=lambda x: x[1], reverse=True)
