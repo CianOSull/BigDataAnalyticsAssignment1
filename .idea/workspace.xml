@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="31b5ef61-2b51-4458-8ff8-61c0e5de22f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part1/A01_Part1.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part1/A01_Part1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part2/A01_Part2.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part2/A01_Part2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part3/A01_Part3.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part3/A01_Part3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +30,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/AssignmentFiles/my_results/check_results/Student_Attempts" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">

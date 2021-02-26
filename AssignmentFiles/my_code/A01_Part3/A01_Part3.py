@@ -77,7 +77,59 @@ def process_line(line):
 # FUNCTION my_main
 # ------------------------------------------
 def my_main(input_folder, output_file, bike_id):
-    pass
+    # Task:
+    # Sometimes bikes are re-organised (moved) from station A to station B to balance the
+    # amount of bikes available in both stations. A truck operates this bike re-balancing
+    # service, and the trips done by-truck are not logged into the dataset. Compute all the
+    # times a given bike_id was moved by the truck re-balancing system.
+
+    # Output variable
+    res = ""
+
+    # File names for each file in the input folder
+    data_filename = os.listdir(input_folder)
+
+    # For a file in the input folder
+    for filename in data_filename:
+        # Open the file
+        data_file = open(input_folder + filename, "r")
+
+        # For a line in that folder
+        for line in data_file.readlines():
+            # Read all the attributes
+            attributes = process_line(line)
+
+            # If the bike id is a key already
+            if attributes[11] in "bike_id_duration":
+                pass
+            # If it isn't, set it as a key to both dictionaries and set their values to zero
+            else:
+                pass
+
+        # Close the file
+        data_file.close()
+
+    # Delete the output file if it exists
+    if os.path.exists(output_file):
+        os.remove(output_file)
+
+    # Output the result
+    # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
+    # station3_id) \n
+    # Second maybe output?
+    # By_Truck \t (2019/05/10 10:00:00, Station2, 2019/05/10 11:00:00, Station3) \n
+    for i in range(10):
+        # Open the outfile
+        output = open(output_file, "a")
+
+        #
+        res = ""
+
+        # Output to file
+        output.write(res)
+
+        # Close output file
+        output.close()
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
