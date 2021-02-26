@@ -118,19 +118,19 @@ def my_main(input_folder, output_file, bike_id):
             attributes = process_line(line)
 
             if attributes[11] == bike_id:
-                if (attributes[7] != prev_end_station_id) and (prev_end_station_id != 0):
+                if (prev_end_station_id != 0) and (attributes[3] != prev_end_station_id):
                     # Store station information in the dictioanry
                     # Store the previous stations id as key and time as value
                     first_station_info[prev_end_station_name] = prev_end_station_log
 
                     # Store the current stations id as key and time as value
-                    second_station_info[attributes[8]] = attributes[1]
+                    second_station_info[attributes[4]] = attributes[1]
 
-                    # print("Truck was used:")
-                    # print("Previous end station:", prev_end_station_id)
-                    # print("Previous end station time:", prev_end_station_log)
-                    # print("New end station:", attributes[7])
-                    # print("New end station time:", attributes[1])
+                    print("Truck was used:")
+                    print("Previous end station:", prev_end_station_id)
+                    print("Previous end station time:", prev_end_station_log)
+                    print("New end station:", attributes[7])
+                    print("New end station time:", attributes[1])
 
                 prev_end_station_id = attributes[7]
                 prev_end_station_name = attributes[8]
@@ -163,7 +163,7 @@ def my_main(input_folder, output_file, bike_id):
         # station3_id) \n
         res = "By_Truck \t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + \
               str(second_station_times[i]) + ", " + str(second_station_names[i]) + ") \n"
-        print(res)
+        # print(res)
 
         # Output to file
         # output.write(res)
