@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="31b5ef61-2b51-4458-8ff8-61c0e5de22f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part1/A01_Part1.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part1/A01_Part1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part2/A01_Part2.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part2/A01_Part2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
       <recent name="E:\CIT4thYear\Semester 2\Python_Projects\BigDataAnalyticsAssignment1\BigDataAnalyticsAssignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.A01_Part2">
+  <component name="RunManager" selected="Python.test_checker">
     <configuration name="A01_Part1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BigDataAnalyticsAssignment1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,9 +106,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_checker" />
         <item itemvalue="Python.A01_Part2" />
         <item itemvalue="Python.A01_Part1" />
-        <item itemvalue="Python.test_checker" />
       </list>
     </recent_temporary>
   </component>
