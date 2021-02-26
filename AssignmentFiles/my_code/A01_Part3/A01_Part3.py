@@ -103,7 +103,8 @@ def my_main(input_folder, output_file, bike_id):
     # This will current store the station name as the key and the log time as the value
     # second_station_info = {}
 
-    # Create lists of the keys and values to make it easier to print htem at once
+    # Using four lists to store the values because they can store duplicates.
+    # Dictionaries can't store keys.
     first_station_names = []
     first_station_times = []
 
@@ -153,8 +154,8 @@ def my_main(input_folder, output_file, bike_id):
         data_file.close()
 
     # Delete the output file if it exists
-    # if os.path.exists(output_file):
-    #     os.remove(output_file)
+    if os.path.exists(output_file):
+        os.remove(output_file)
 
     # Create lists of the keys and values to make it easier to print htem at once
     # first_station_names = list(first_station_info.keys())
@@ -170,19 +171,19 @@ def my_main(input_folder, output_file, bike_id):
     # By_Truck \t (2019/05/10 10:00:00, Station2, 2019/05/10 11:00:00, Station3) \n
     for i in range(len(first_station_names)):
         # Open the outfile
-        # output = open(output_file, "a")
+        output = open(output_file, "a")
 
         # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
         # station3_id) \n
         res = "By_Truck \t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + \
               str(second_station_times[i]) + ", " + str(second_station_names[i]) + ")\n"
-        print(res)
+        # print(res)
 
         # Output to file
-        # output.write(res)
+        output.write(res)
 
         # Close output file
-        # output.close()
+        output.close()
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
