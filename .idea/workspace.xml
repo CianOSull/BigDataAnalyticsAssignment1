@@ -40,7 +40,7 @@
       <recent name="E:\CIT4thYear\Semester 2\Python_Projects\BigDataAnalyticsAssignment1\BigDataAnalyticsAssignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.A01_Part1">
+  <component name="RunManager" selected="Python.test_checker">
     <configuration name="A01_Part1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BigDataAnalyticsAssignment1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -106,9 +106,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.A01_Part1" />
-        <item itemvalue="Python.A01_Part2" />
         <item itemvalue="Python.test_checker" />
+        <item itemvalue="Python.A01_Part2" />
+        <item itemvalue="Python.A01_Part1" />
       </list>
     </recent_temporary>
   </component>
@@ -147,11 +147,6 @@
           <url>file://$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part2/A01_Part2.py</url>
           <line>96</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part2/A01_Part2.py</url>
-          <line>99</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

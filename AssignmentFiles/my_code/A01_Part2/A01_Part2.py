@@ -109,8 +109,8 @@ def my_main(input_folder, output_file, top_n_bikes):
                 bike_id_trips[attributes[11]] += 1
             # If it isn't, set it as a key to both dictionaries and set their values to zero
             else:
-                bike_id_duration[attributes[11]] = 0
-                bike_id_trips[attributes[11]] = 0
+                bike_id_duration[attributes[11]] = attributes[2]
+                bike_id_trips[attributes[11]] = 1
 
         # Close the file
         data_file.close()
@@ -124,17 +124,28 @@ def my_main(input_folder, output_file, top_n_bikes):
     # Remember that dictionary.items() returns a tuple of (key, value)
     # sorted_duration is a list of tuples
     sorted_duration = sorted(bike_id_duration.items(), key=lambda x: x[1], reverse=True)
-    
-    # print(sorted_duration[0])
-    
+
+    # Delete the output file if it exists
+    if os.path.exists(output_file):
+        os.remove(output_file)
+
     # Output the result for the top n bikes (write n amount of lines)
     # bike_id \t (total_duration_time_for_their_trips, total_number_of_trips) \n
     for i in range(top_n_bikes):
+        # Open the outfile
+        output = open(output_file, "a")
+
         # This looks messy but it makes sense
         # sorted_duration[i][0] = the 0 index of a tuple in sorted duration is its bike id
         # sorted_duration[i][1] = the 1 index of a tuple in sorted duration is its total duration
         res = str(sorted_duration[i][0]) + "\t(" + str(sorted_duration[i][1]) + ", " + str(bike_id_trips[sorted_duration[i][0]]) + ")\n"
-        print(res)
+
+        # Output to file
+        output.write(res)
+
+        # Close output file
+        output.close()
+
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION

@@ -128,7 +128,7 @@ def my_main(input_folder, output_file):
     # Sort the list
     all_stations_sorted.sort()
 
-    # Delete the ouput fiel if it exists
+    # Delete the output file if it exists
     if os.path.exists(output_file):
         os.remove(output_file)
 
