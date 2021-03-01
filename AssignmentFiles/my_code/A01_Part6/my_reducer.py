@@ -24,10 +24,57 @@ import sys
 import codecs
 
 # ------------------------------------------
+# FUNCTION process_line
+# ------------------------------------------
+def process_line(line):
+    # The return tuple
+    res = ()
+
+    # Split the line into its individual components
+    # line_info will look something like this:
+    # ['(2019/05/07 11:42:00', 'Banker St & Meserole Ave', '2019/05/07 15:57:14', 'Norfolk St & Broome St)']
+    line_info = line.strip().split("\t")[1].split(", ")
+    first_time = line_info[0].strip("(")
+    first_name = line_info[1]
+    second_time = line_info[2]
+    second_name = line_info[3].strip(")")
+
+    res = (first_time, first_name, second_time, second_name)
+
+    return res
+
+# ------------------------------------------
 # FUNCTION my_reduce
 # ------------------------------------------
 def my_reduce(my_input_stream, my_output_stream, my_reducer_input_parameters):
-    pass
+    # Task:
+    # Sometimes bikes are re-organised (moved) from station A to station B to balance the
+    # amount of bikes available in both stations. A truck operates this bike re-balancing
+    # service, and the trips done by-truck are not logged into the dataset. Compute all the
+    # times a given bike_id was moved by the truck re-balancing system.
+
+    # (03) start_station_id
+    # (07) stop_station_id
+
+    # (04) start_station_name
+    # (08) stop_station_name
+
+    # (01) stop_time
+
+    # Output variable
+    res = ""
+
+    # For a line in that folder
+    for line in my_input_stream:
+        (first_time, first_name, second_time, second_name) = process_line(line)
+
+        # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
+        # station3_id) \n
+        res = "By_Truck \t(" + first_time + ", " + first_name + ", " + \
+              second_time + ", " + second_name + ")\n"
+
+        # Output to file
+        my_output_stream.write(res)
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION

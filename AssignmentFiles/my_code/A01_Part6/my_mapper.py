@@ -76,7 +76,69 @@ def process_line(line):
 # FUNCTION my_map
 # ------------------------------------------
 def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
-    pass
+    # Task:
+    # Sometimes bikes are re-organised (moved) from station A to station B to balance the
+    # amount of bikes available in both stations. A truck operates this bike re-balancing
+    # service, and the trips done by-truck are not logged into the dataset. Compute all the
+    # times a given bike_id was moved by the truck re-balancing system.
+
+    # (03) start_station_id
+    # (07) stop_station_id
+
+    # (04) start_station_name
+    # (08) stop_station_name
+
+    # (01) stop_time
+
+    # Output variable
+    res = ""
+
+    # Using four lists to store the values because they can store duplicates.
+    # Dictionaries can't store keys.
+    first_station_names = []
+    first_station_times = []
+
+    second_station_names = []
+    second_station_times = []
+
+    # Set hte previous varibles to be nothing by default
+    prev_end_station_id = 0
+    prev_end_station_log = 0
+    prev_end_station_name = ""
+
+    # For a line in that folder
+    for line in my_input_stream:
+        # Read all the attributes
+        attributes = process_line(line)
+
+        if attributes[11] == my_mapper_input_parameters[0]:
+            # if previous station id is 0 then there isn't a previous station yet
+            if (prev_end_station_id != 0) and (attributes[3] != prev_end_station_id):
+                # Store station information in the dictioanry
+                # Store the previous stations name as key and time as value
+                first_station_names.append(prev_end_station_name)
+                first_station_times.append(prev_end_station_log)
+
+                # Store the current stations name as key and time as value
+                second_station_names.append(attributes[4])
+                second_station_times.append(attributes[0])
+
+            prev_end_station_id = attributes[7]
+            prev_end_station_name = attributes[8]
+            prev_end_station_log = attributes[1]
+
+    # Output the result
+    # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
+    # station3_id) \n
+    for i in range(len(first_station_names)):
+        # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
+        # station3_id) \n
+        res = "universal\t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + \
+              str(second_station_times[i]) + ", " + str(second_station_names[i]) + ")\n"
+        # print(res)
+
+        # Output to file
+        my_output_stream.write(res)
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION

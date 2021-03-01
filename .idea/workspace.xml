@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="31b5ef61-2b51-4458-8ff8-61c0e5de22f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part4/my_reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part4/my_reducer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part5/my_mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part5/my_mapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part5/my_reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part5/my_reducer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part6/my_mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part6/my_mapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part6/my_reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part6/my_reducer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/1_my_map_simulation/map_2019_05_01.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/1_my_map_simulation/map_2019_05_01.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/1_my_map_simulation/map_2019_05_02.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/1_my_map_simulation/map_2019_05_02.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/1_my_map_simulation/map_2019_05_03.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/1_my_map_simulation/map_2019_05_03.csv" afterDir="false" />
@@ -80,8 +79,50 @@
       <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/1_my_map_simulation/map_2019_07_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/1_my_map_simulation/map_2019_07_11.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/1_my_map_simulation/map_2019_07_12.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/1_my_map_simulation/map_2019_07_12.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/2_my_sort_simulation/sort_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/2_my_sort_simulation/sort_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/2_my_sort_simulation/sort_2.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/3_my_reduce_simulation/reduce_sort_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/3_my_reduce_simulation/reduce_sort_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/check_results/test_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/check_results/test_checker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part5/3_my_reduce_simulation/reduce_sort_2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_06.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_06.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_07.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_07.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_08.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_08.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_09.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_09.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_19.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_19.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_21.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_21.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_22.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_22.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_23.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_23.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_24.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_24.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_26.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_26.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_27.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_05_27.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_01.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_01.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_02.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_02.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_03.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_03.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_06.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_06.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_08.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_08.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_09.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_09.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_17.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_17.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_21.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_21.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_22.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_22.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_23.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_23.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_26.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_26.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_27.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_27.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_28.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_28.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_29.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_29.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_30.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_06_30.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_01.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_01.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_04.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_04.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_05.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_05.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_08.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_08.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/1_my_map_simulation/map_2019_07_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/2_my_sort_simulation/sort_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/2_my_sort_simulation/sort_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/3_my_reduce_simulation/reduce_sort_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/3_my_reduce_simulation/reduce_sort_1.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,28 +159,7 @@
       <recent name="E:\CIT4thYear\Semester 2\Python_Projects\BigDataAnalyticsAssignment1\BigDataAnalyticsAssignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_checker">
-    <configuration name="A01_Part3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BigDataAnalyticsAssignment1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part3" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part3/A01_Part3.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.my_meta-algorithm (2)">
     <configuration name="my_mapper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BigDataAnalyticsAssignment1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,6 +194,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part5/my_meta-algorithm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="my_meta-algorithm (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BigDataAnalyticsAssignment1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part6" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part6/my_meta-algorithm.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -226,11 +267,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_checker" />
+        <item itemvalue="Python.my_meta-algorithm (2)" />
         <item itemvalue="Python.my_meta-algorithm (1)" />
+        <item itemvalue="Python.test_checker" />
         <item itemvalue="Python.my_meta-algorithm" />
         <item itemvalue="Python.my_mapper" />
-        <item itemvalue="Python.A01_Part3" />
       </list>
     </recent_temporary>
   </component>
