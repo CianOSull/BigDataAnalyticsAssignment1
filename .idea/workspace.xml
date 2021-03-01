@@ -2,6 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31b5ef61-2b51-4458-8ff8-61c0e5de22f3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part4/my_mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part4/my_mapper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part4/my_reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part4/my_reducer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_01.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_01.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_02.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_02.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_03.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_03.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_04.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_04.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_05.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_05.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_06.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_06.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_07.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_07.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_08.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_08.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_09.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_09.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/1_my_map_simulation/map_2019_05_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/2_my_sort_simulation/sort_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/2_my_sort_simulation/sort_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/3_my_reduce_simulation/reduce_sort_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part4/3_my_reduce_simulation/reduce_sort_1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/check_results/test_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/check_results/test_checker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,27 +55,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.test_checker">
-    <configuration name="A01_Part1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BigDataAnalyticsAssignment1" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part1/A01_Part1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="A01_Part2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BigDataAnalyticsAssignment1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,6 +97,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="my_mapper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BigDataAnalyticsAssignment1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part4/my_mapper.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="my_meta-algorithm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BigDataAnalyticsAssignment1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part4" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part4/my_meta-algorithm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_checker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BigDataAnalyticsAssignment1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,9 +163,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.test_checker" />
+        <item itemvalue="Python.my_meta-algorithm" />
+        <item itemvalue="Python.my_mapper" />
         <item itemvalue="Python.A01_Part3" />
         <item itemvalue="Python.A01_Part2" />
-        <item itemvalue="Python.A01_Part1" />
       </list>
     </recent_temporary>
   </component>
