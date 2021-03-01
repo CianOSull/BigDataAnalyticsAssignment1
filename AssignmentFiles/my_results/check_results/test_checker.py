@@ -109,7 +109,7 @@ def my_main(part, assignment_solution_folder, student_solution_folder):
 # ---------------------------------------------------------------
 if __name__ == '__main__':
     # 1. We get the input values
-    part = 3
+    part = 4
 
     # 1.1. If the program is called from console, we modify the parameters
     if (len(sys.argv) > 1):

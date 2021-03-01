@@ -119,12 +119,12 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
             end_stations[attributes[8]] = 1
 
     # This will be a list of all the unique station names
-    all_stations_sorted = list(set(start_stations.keys()).union(set(end_stations.keys())))
+    all_stations = list(set(start_stations.keys()).union(set(end_stations.keys())))
     # Sort the list
-    all_stations_sorted.sort()
+    # all_stations_sorted.sort()
 
     # The big change to this part is at the bottom, now it is using the output stream passed in to do outputting
-    for station_name in all_stations_sorted:
+    for station_name in all_stations:
         # This if block checks to make sure that each station name is in both dicitonaries
         if (station_name in start_stations) and (station_name in end_stations):
             # Create the output line
