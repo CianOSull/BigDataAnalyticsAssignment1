@@ -75,7 +75,26 @@ def process_line(line):
 # FUNCTION my_map
 # ------------------------------------------
 def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
-    pass
+    # Task:
+    # Compute the amount of trips starting from each station_name.
+    # Compute the amount of trips finishing at each station_name.
+    # Key information:
+    # (04) start_station_name
+    # (08) stop_station_name
+
+    # This will be a string for you outputting
+    # Ouput should be:
+    # station_name \t (total_trips_starting_from_the_station, total_trips_finishing_at_the_station) \n
+    # Lines should be in alphebetical order and one line  each
+    res = ""
+
+    # This dictionary will store all the start stations
+    start_stations = {}
+
+    # This will store the end stations
+    end_stations = {}
+
+    print(my_input_stream)
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
