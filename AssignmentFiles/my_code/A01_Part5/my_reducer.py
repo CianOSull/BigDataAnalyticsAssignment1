@@ -24,10 +24,76 @@ import sys
 import codecs
 
 # ------------------------------------------
+# FUNCTION process_line
+# ------------------------------------------
+def process_line(line):
+    # The return tuple
+    res = ()
+
+    # Split the line
+    lines = line.strip().split("\t")
+
+    # The station name
+    bike_id = lines[0]
+
+    # Start station count
+    # This line probably looks like mess but here is how it works.
+    # First split e.g. '(24, 15)' into ['(24', '15)']
+    # Then get the first index = '(24'
+    # Then just remvoe the bracket
+    duration = int(lines[1].split(", ")[0].strip("("))
+
+    # End station count
+    trips = int(lines[1].split(", ")[1].strip(")"))
+
+    res = (bike_id, duration, trips)
+
+    return res
+
+# ------------------------------------------
 # FUNCTION my_reduce
 # ------------------------------------------
 def my_reduce(my_input_stream, my_output_stream, my_reducer_input_parameters):
-    pass
+    # NOTE FOR MYSELF:
+    # The point of this is to go through each file and get the grand total for each street
+
+    res = ""
+
+    # Create a dictionary to store the top n bikes
+    bike_id_duration = {}
+    bike_id_trips = {}
+
+    # For a line in that folder
+    for line in my_input_stream:
+        (bike_id, duration, trips) = process_line(line)
+        # print(bike_id, duration, trips)
+
+        # Add duration
+        if bike_id in bike_id_duration:
+            bike_id_duration[bike_id] += duration
+        else:
+            bike_id_duration[bike_id] = duration
+
+        # Add trips
+        if bike_id in bike_id_trips:
+            bike_id_trips[bike_id] += trips
+        else:
+            bike_id_trips[bike_id] = trips
+
+    # Sort hte duration by total duration
+    sorted_duration = sorted(bike_id_duration.items(), key=lambda x: x[1], reverse=True)
+
+    # Output the result for the top n bikes (write n amount of lines)
+    # bike_id \t (total_duration_time_for_their_trips, total_number_of_trips) \n
+    for i in range(my_reducer_input_parameters[0]):
+        # This looks messy but it makes sense
+        # sorted_duration[i][0] = the 0 index of a tuple in sorted duration is its bike id
+        # sorted_duration[i][1] = the 1 index of a tuple in sorted duration is its total duration
+        res = str(sorted_duration[i][0]) + "\t(" + str(sorted_duration[i][1]) + ", " + str(
+            bike_id_trips[sorted_duration[i][0]]) + ")\n"
+
+        # Output to file
+        my_output_stream.write(res)
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION

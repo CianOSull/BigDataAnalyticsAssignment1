@@ -23,7 +23,9 @@
 import sys
 import codecs
 
-
+# ------------------------------------------
+# FUNCTION process_line
+# ------------------------------------------
 def process_line(line):
     # The return tuple
     res = ()
@@ -63,11 +65,14 @@ def my_reduce(my_input_stream, my_output_stream, my_reducer_input_parameters):
     for line in my_input_stream:
         # Set the values here
         (station, start_count, end_count) = process_line(line)
+
+        # Add the start count
         if station in start_station_dict:
             start_station_dict[station] += start_count
         else:
             start_station_dict[station] = start_count
 
+        # Add the end count
         if station in end_station_dict:
             end_station_dict[station] += end_count
         else:
