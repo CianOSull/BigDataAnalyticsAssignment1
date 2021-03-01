@@ -72,7 +72,7 @@ def my_main(part, assignment_solution_folder, student_solution_folder):
         list_of_files_to_be_checked.append((assignment_solution_folder + "2_my_sort_simulation/sort_1.txt", student_solution_folder + "2_my_sort_simulation/sort_1.txt"))
         list_of_files_to_be_checked.append((assignment_solution_folder + "2_my_sort_simulation/sort_2.txt", student_solution_folder + "2_my_sort_simulation/sort_2.txt"))
         list_of_files_to_be_checked.append((assignment_solution_folder + "3_my_reduce_simulation/reduce_sort_1.txt", student_solution_folder + "3_my_reduce_simulation/reduce_sort_1.txt"))
-        list_of_files_to_be_checked.append((assignment_solution_folder + "3_my_reduce_simulation/reduce_sort_2.txt", student_solution_folder + "3_my_reduce_simulation/reduce_sort_2.txt"))
+        list_of_files_to_be_checked.append((assignment_solution_folder + "3_my_reduce_simulation/reduce_sort_1.txt", student_solution_folder + "3_my_reduce_simulation/reduce_sort_1.txt"))
     elif ((part == 5) or (part == 6)):
         list_of_files_to_be_checked.append((assignment_solution_folder + "2_my_sort_simulation/sort_1.txt", student_solution_folder + "2_my_sort_simulation/sort_1.txt"))
         list_of_files_to_be_checked.append((assignment_solution_folder + "3_my_reduce_simulation/reduce_sort_1.txt", student_solution_folder + "3_my_reduce_simulation/reduce_sort_1.txt"))
@@ -109,7 +109,7 @@ def my_main(part, assignment_solution_folder, student_solution_folder):
 # ---------------------------------------------------------------
 if __name__ == '__main__':
     # 1. We get the input values
-    part = 4
+    part = 5
 
     # 1.1. If the program is called from console, we modify the parameters
     if (len(sys.argv) > 1):

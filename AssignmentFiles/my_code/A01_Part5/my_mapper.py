@@ -75,7 +75,41 @@ def process_line(line):
 # FUNCTION my_map
 # ------------------------------------------
 def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
-    pass
+    # Task:
+    # Compute the top_n_bikes with highest total duration time for their trips.
+    # (02) trip_duration
+    # (11) bike_id
+
+    # result
+    res = ""
+
+    # Create a dictionary to store the top n bikes
+    bike_id_duration = {}
+    bike_id_trips = {}
+
+    # For a line in that folder
+    for line in my_input_stream:
+        # Read all the attributes
+        attributes = process_line(line)
+
+        # If the bike id is a key already
+        if attributes[11] in bike_id_duration:
+            # Add to the total duration for the bike id
+            bike_id_duration[attributes[11]] += attributes[2]
+            # Add to the total amount of trips for the bike id
+            bike_id_trips[attributes[11]] += 1
+        # If it isn't, set it as a key to both dictionaries and set their values to zero
+        else:
+            bike_id_duration[attributes[11]] = attributes[2]
+            bike_id_trips[attributes[11]] = 1
+
+    # Output the result for the top n bikes (write n amount of lines)
+    # bike_id \t (total_duration_time_for_their_trips, total_number_of_trips) \n
+    for id in bike_id_duration:
+        res = str(id) + "\t(" + str(bike_id_duration[id]) + ", " + str(bike_id_trips[id]) + ")\n"
+
+        # Output to file
+        my_output_stream.write(res)
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
