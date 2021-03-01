@@ -133,7 +133,7 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
     for i in range(len(first_station_names)):
         # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
         # station3_id) \n
-        res = "By_Truck \t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + \
+        res = "universal\t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + \
               str(second_station_times[i]) + ", " + str(second_station_names[i]) + ")\n"
         # print(res)
 
