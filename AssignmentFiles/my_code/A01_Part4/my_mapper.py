@@ -100,62 +100,48 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
     # This will store the end stations
     end_stations = {}
 
-    print(my_input_stream)
+    # So basically i think the input stream is just all the contents of a file by in a byte stream
+    # Thus when a for loop, loops through it, each index in it is a line from the data file
+    for line in my_input_stream:
+        # Read all the attributes
+        attributes = process_line(line)
 
-    # # For a file in the input folder
-    # for filename in data_filename:
-    #     # Open the file
-    #     data_file = open(input_folder + filename, "r")
-    #
-    #     # For a line in that folder
-    #     for line in data_file.readlines():
-    #         # Read all the attributes
-    #         attributes = process_line(line)
-    #
-    #         # Increase the count of the start station
-    #         if attributes[4] in start_stations:
-    #             start_stations[attributes[4]] += 1
-    #         else:
-    #             start_stations[attributes[4]] = 1
-    #
-    #         # Increase the count of the end station
-    #         if attributes[8] in end_stations:
-    #             end_stations[attributes[8]] += 1
-    #         else:
-    #             end_stations[attributes[8]] = 1
-    #
-    #     # Close the file
-    #     data_file.close()
-    #
-    # # This will be a list of all the unique station names
-    # all_stations_sorted = list(set(start_stations.keys()).union(set(end_stations.keys())))
-    # # Sort the list
-    # all_stations_sorted.sort()
-    #
-    # for station_name in all_stations_sorted:
-    #     # Open the outfile
-    #     output = open(output_file, "a")
-    #
-    #     # This if block checks to make sure that each station name is in both dicitonaries
-    #     if (station_name in start_stations) and (station_name in end_stations):
-    #         # Create the output line
-    #         res = station_name + "\t(" + str(start_stations[station_name]) + ", " + str(
-    #             end_stations[station_name]) + ") \n"
-    #
-    #     elif station_name in start_stations:
-    #         res = station_name + "\t(" + str(start_stations[station_name]) + ", 0) \n"
-    #
-    #     elif station_name in end_stations:
-    #         res = station_name + "\t(0, " + str(end_stations[station_name]) + ") \n"
-    #
-    #     # # Print the result
-    #     # print(res)
-    #
-    #     # Output to file
-    #     output.write(res)
-    #
-    #     # Close output file
-    #     output.close()
+        # Increase the count of the start station
+        if attributes[4] in start_stations:
+            start_stations[attributes[4]] += 1
+        else:
+            start_stations[attributes[4]] = 1
+
+        # Increase the count of the end station
+        if attributes[8] in end_stations:
+            end_stations[attributes[8]] += 1
+        else:
+            end_stations[attributes[8]] = 1
+
+    # This will be a list of all the unique station names
+    all_stations_sorted = list(set(start_stations.keys()).union(set(end_stations.keys())))
+    # Sort the list
+    all_stations_sorted.sort()
+
+    # The big change to this part is at the bottom, now it is using the output stream passed in to do outputting
+    for station_name in all_stations_sorted:
+        # This if block checks to make sure that each station name is in both dicitonaries
+        if (station_name in start_stations) and (station_name in end_stations):
+            # Create the output line
+            res = station_name + "\t(" + str(start_stations[station_name]) + ", " + str(
+                end_stations[station_name]) + ") \n"
+
+        elif station_name in start_stations:
+            res = station_name + "\t(" + str(start_stations[station_name]) + ", 0) \n"
+
+        elif station_name in end_stations:
+            res = station_name + "\t(0, " + str(end_stations[station_name]) + ") \n"
+
+        # # Print the result
+        # print(res)
+
+        # Using output stream passed to output
+        my_output_stream.write(res)
 
 
 # ---------------------------------------------------------------
