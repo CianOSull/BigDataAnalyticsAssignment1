@@ -75,6 +75,11 @@ def process_line(line):
 # FUNCTION my_map
 # ------------------------------------------
 def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
+    # Just a note for myself:
+    # So the point of this mapper file is that it just handles processing the files inputted into it.
+    # The meta algorithm will call it, pass it a file name to open and work on and what file to output.
+    # It does the same as the os.listdir for loop in exercise 1.
+
     # Task:
     # Compute the amount of trips starting from each station_name.
     # Compute the amount of trips finishing at each station_name.
@@ -94,7 +99,55 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
     # This will store the end stations
     end_stations = {}
 
-    print(my_input_stream)
+    # Open the file
+    data_file = open(my_input_stream, "r")
+
+    # For a line in that folder
+    for line in data_file.readlines():
+        # Read all the attributes
+        attributes = process_line(line)
+
+        # Increase the count of the start station
+        if attributes[4] in start_stations:
+            start_stations[attributes[4]] += 1
+        else:
+            start_stations[attributes[4]] = 1
+
+        # Increase the count of the end station
+        if attributes[8] in end_stations:
+            end_stations[attributes[8]] += 1
+        else:
+            end_stations[attributes[8]] = 1
+
+    # Close the file
+    data_file.close()
+
+    # This will be a list of all the unique station names
+    all_stations_sorted = list(set(start_stations.keys()).union(set(end_stations.keys())))
+    # Sort the list
+    all_stations_sorted.sort()
+
+    for station_name in all_stations_sorted:
+        # Open the outfile
+        output = open(my_output_stream, "a")
+
+        # This if block checks to make sure that each station name is in both dicitonaries
+        if (station_name in start_stations) and (station_name in end_stations):
+            # Create the output line
+            res = station_name + "\t(" + str(start_stations[station_name]) + ", " + str(
+                end_stations[station_name]) + ") \n"
+
+        elif station_name in start_stations:
+            res = station_name + "\t(" + str(start_stations[station_name]) + ", 0) \n"
+
+        elif station_name in end_stations:
+            res = station_name + "\t(0, " + str(end_stations[station_name]) + ") \n"
+
+        # Output to file
+        output.write(res)
+
+        # Close output file
+        output.close()
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
