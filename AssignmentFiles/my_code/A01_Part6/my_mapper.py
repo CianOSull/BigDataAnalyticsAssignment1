@@ -88,12 +88,50 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
     # (04) start_station_name
     # (08) stop_station_name
 
+    # (00) start_time
     # (01) stop_time
 
     # Output variable
     res = "universal\t("
 
+    # Using four lists to store the values because they can store duplicates.
+    # Dictionaries can't store keys.
+    start_station_names = []
+    start_station_times = []
 
+    end_station_names = []
+    end_station_times = []
+
+    # For a line in that folder
+    for line in my_input_stream:
+        # Read all the attributes
+        attributes = process_line(line)
+
+        if attributes[11] == my_mapper_input_parameters[0]:
+            # If this isnt the first instance of the bike id then store its information
+            # Store the previous stations information
+            start_station_names.append(attributes[4])
+            start_station_times.append(attributes[0])
+
+            # Store the current stations information
+            end_station_names.append(attributes[8])
+            end_station_times.append(attributes[1])
+
+    # If the station list isn't empty
+    if 0 < len(start_station_names):
+        for i in range(len(start_station_names)):
+            print(start_station_names[i], ":", end_station_names[i])
+
+            if i < (len(start_station_names)-1):
+                # Format will be "universal (first station time @ second station time @ first station name @ second station name @ etc)
+                res += str(start_station_times[i]) + " @ " + str(end_station_times[i]) + " @ " + str(start_station_names[i]) + " @ " + str(end_station_names[i]) + " @ "
+            else:
+                res += str(start_station_times[i]) + " @ " + str(end_station_times[i]) + " @ " + str(start_station_names[i]) + " @ " + str(end_station_names[i])
+
+        res += ")"
+
+        # Output to file
+        my_output_stream.write(res)
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
