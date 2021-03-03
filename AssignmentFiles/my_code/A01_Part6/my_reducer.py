@@ -101,10 +101,10 @@ def my_reduce(my_input_stream, my_output_stream, my_reducer_input_parameters):
 
             current_station = first_station_names[i]
 
-            if (prev_end_station != "") and prev_end_station != current_station:
+            if (len(prev_end_station) != 0) and prev_end_station != current_station:
                 # print(prev_end_station, ":", first_station_names[i])
 
-                res = "By_Truck \t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + str(second_station_times[i]) + ", " + str(second_station_names[i]) + ")\n"
+                res = "By_Truck \t(" + str(second_station_times[i-1]) + ", " + str(second_station_names[i-1]) + ", " + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ")\n"
 
                 # Output to file
                 my_output_stream.write(res)
