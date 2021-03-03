@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="31b5ef61-2b51-4458-8ff8-61c0e5de22f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part6/my_reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part6/my_reducer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/check_results/test_checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/check_results/test_checker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
       <recent name="E:\CIT4thYear\Semester 2\Python_Projects\BigDataAnalyticsAssignment1\BigDataAnalyticsAssignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.my_meta-algorithm (2)">
+  <component name="RunManager" selected="Python.test_checker">
     <configuration name="A01_Part3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BigDataAnalyticsAssignment1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -157,10 +157,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_checker" />
         <item itemvalue="Python.my_meta-algorithm (2)" />
         <item itemvalue="Python.my_meta-algorithm (1)" />
         <item itemvalue="Python.A01_Part3" />
-        <item itemvalue="Python.test_checker" />
         <item itemvalue="Python.my_meta-algorithm" />
       </list>
     </recent_temporary>
