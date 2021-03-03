@@ -93,34 +93,7 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
     # Output variable
     res = "universal\t("
 
-    # Set hte previous varibles to be nothing by default
-    prev_end_station_id = 0
-    prev_end_station_log = 0
-    prev_end_station_name = ""
 
-    # For a line in that folder
-    for line in my_input_stream:
-        # Read all the attributes
-        attributes = process_line(line)
-
-        # Check for the right bike id
-        if attributes[11] == my_mapper_input_parameters[0]:
-            # Skip the first one as that will no previous end staiton
-            if prev_end_station_id != 0:
-                # If it is the right id and it is not the first instance, then ouput the values
-                # We just need to store the end station time as
-                # Ouput is in this format: first station time, second station time, first station name, second station name
-                res += str(prev_end_station_log) + " @ " + str(attributes[0]) + " @ " + str(prev_end_station_name) + " @ " + str(attributes[4])
-
-                # Add the ) to the end
-                res += ")"
-
-                # Output to file
-                my_output_stream.write(res)
-
-            prev_end_station_id = attributes[7]
-            prev_end_station_name = attributes[8]
-            prev_end_station_log = attributes[1]
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
