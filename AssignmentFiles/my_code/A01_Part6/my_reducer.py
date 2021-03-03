@@ -30,27 +30,30 @@ def process_line(line):
     # The return tuple
     res = ()
 
-    # Split the line into its individual components
-    # line_info will look something like this:
-    # ['(2019/05/07 11:42:00', 'Banker St & Meserole Ave', '2019/05/07 15:57:14', 'Norfolk St & Broome St)']
-    # line_info = line.strip().split("\t")[1].split(", ")
-    # first_time = line_info[0].strip("(")
-    # first_name = line_info[1]
-    # second_time = line_info[2]
-    # second_name = line_info[3].strip(")")
+    # Get necessary info from line
+    #['universal', '(2019/05/06 15:23:17 @ 2019/05/06 15:33:06 @ W 11 St & 6 Ave @ 1 Ave & E 18 St @ 2019/05/06 16:44:29 @ 2019/05/06 16:51:56 @ 1 Ave & E 18 St @ Avenue D & E 12 St)']
+    line_info = line.strip().split("\t")[1].strip("()").split(" @ ")
+    # print(line_info)
 
-    # New order looks like this:
-    # (first time @ second time @ first station @ second station)
-    # line_info = line.strip().split("\t")[1].split(" @ ")
-    line_info = line.strip().split("\t")[1].split(" @ ")
+    first_station_names = []
+    first_station_times = []
 
-    first_time = line_info[0].strip("(")
-    second_time = line_info[1]
-    first_name = line_info[2]
-    second_name = line_info[3].strip(")")
+    second_station_names = []
+    second_station_times = []
 
-    # print(first_time, second_time, first_name, second_name)
-    res = (first_time, second_time, first_name, second_name)
+    for i in range(len(line_info), 4):
+        first_station_times.append(line_info[i])
+
+    for i in range(1, len(line_info), 4):
+        second_station_times.append(line_info[i])
+
+    for i in range(2, len(line_info), 4):
+        first_station_names.append(line_info[i])
+
+    for i in range(3, len(line_info), 4):
+        second_station_names.append(line_info[i])
+
+    res = (first_station_times, second_station_times, first_station_names, second_station_names)
 
     return res
 
@@ -75,19 +78,24 @@ def my_reduce(my_input_stream, my_output_stream, my_reducer_input_parameters):
     # Output variable
     res = ""
 
+    # Using four lists to store the values because they can store duplicates.
+    # Dictionaries can't store keys.
+    first_station_names = []
+    first_station_times = []
+
+    second_station_names = []
+    second_station_times = []
+
     # For a line in that folder
     for line in my_input_stream:
         # This should only run if the length of line is more than 13 characters because if it is,
         # then that means there is information in the line. If iti s only 13 then it is blank
-        (first_time, second_time, first_name, second_name) = process_line(line)
+        (first_station_times, second_station_times, first_station_names, second_station_names) = line_info = process_line(line)
 
-        # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
-        # station3_id) \n
-        res = "By_Truck \t(" + first_time + ", " + first_name + ", " + \
-              second_time + ", " + second_name + ")\n"
 
-        # Output to file
-        my_output_stream.write(res)
+
+
+
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION

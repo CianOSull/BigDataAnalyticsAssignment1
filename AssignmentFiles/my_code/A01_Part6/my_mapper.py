@@ -120,7 +120,7 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
     # If the station list isn't empty
     if 0 < len(start_station_names):
         for i in range(len(start_station_names)):
-            print(start_station_names[i], ":", end_station_names[i])
+            # print(start_station_names[i], ":", end_station_names[i])
 
             if i < (len(start_station_names)-1):
                 # Format will be "universal (first station time @ second station time @ first station name @ second station name @ etc)

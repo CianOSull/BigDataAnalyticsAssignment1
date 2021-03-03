@@ -31,20 +31,20 @@ def process_line(line):
     res = ()
 
     # Split the line
-    lines = line.strip().split("\t")
+    line_info = line.strip().split("\t")[1].strip("()")
 
     # The station name
-    bike_id = int(lines[1].split(", ")[0].strip("("))
+    bike_id = int(line_info.split(", ")[0])
 
     # Start station count
     # This line probably looks like mess but here is how it works.
     # First split e.g. '(24, 15)' into ['(24', '15)']
     # Then get the first index = '(24'
     # Then just remvoe the bracket
-    duration = int(lines[1].split(", ")[1])
+    duration = int(line_info.split(", ")[1])
 
     # End station count
-    trips = int(lines[1].split(", ")[2].strip(")"))
+    trips = int(line_info.split(", ")[2])
 
     res = (bike_id, duration, trips)
 
