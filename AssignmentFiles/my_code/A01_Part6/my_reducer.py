@@ -33,13 +33,36 @@ def process_line(line):
     # Split the line into its individual components
     # line_info will look something like this:
     # ['(2019/05/07 11:42:00', 'Banker St & Meserole Ave', '2019/05/07 15:57:14', 'Norfolk St & Broome St)']
-    line_info = line.strip().split("\t")[1].split(", ")
+    # line_info = line.strip().split("\t")[1].split(", ")
+    # first_time = line_info[0].strip("(")
+    # first_name = line_info[1]
+    # second_time = line_info[2]
+    # second_name = line_info[3].strip(")")
+
+    # New order looks like this:
+    # (first time @ second time @ first station @ second station)
+    # line_info = line.strip().split("\t")[1].split(" @ ")
+    line_sep = line.strip().split("\t")[1]
+
+    # if 2 < len(line_sep):
+    #     # print(line_sep.split(" @ "))
+    #     line_info = line_sep.split(" @ ")
+    #     first_time = line_info[0].strip("(")
+    #     second_time = line_info[1]
+    #     first_name = line_info[2]
+    #     second_name = line_info[3].strip(")")
+    #
+    #     # print(first_time, second_time, first_name, second_name)
+    #     res = (first_time, second_time, first_name, second_name)
+
+    line_info = line_sep.split(" @ ")
     first_time = line_info[0].strip("(")
-    first_name = line_info[1]
-    second_time = line_info[2]
+    second_time = line_info[1]
+    first_name = line_info[2]
     second_name = line_info[3].strip(")")
 
-    res = (first_time, first_name, second_time, second_name)
+    # print(first_time, second_time, first_name, second_name)
+    res = (first_time, second_time, first_name, second_name)
 
     return res
 
@@ -66,15 +89,20 @@ def my_reduce(my_input_stream, my_output_stream, my_reducer_input_parameters):
 
     # For a line in that folder
     for line in my_input_stream:
-        (first_time, first_name, second_time, second_name) = process_line(line)
+        # print(len(line))
 
-        # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
-        # station3_id) \n
-        res = "By_Truck \t(" + first_time + ", " + first_name + ", " + \
-              second_time + ", " + second_name + ")\n"
+        # This should only run if the length of line is more than 13 characters because if it is,
+        # then that means there is information in the line. If iti s only 13 then it is blank
+        if 13 < len(line):
+            (first_time, second_time, first_name, second_name) = process_line(line)
 
-        # Output to file
-        my_output_stream.write(res)
+            # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
+            # station3_id) \n
+            res = "By_Truck \t(" + first_time + ", " + first_name + ", " + \
+                  second_time + ", " + second_name + ")\n"
+
+            # Output to file
+            my_output_stream.write(res)
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION

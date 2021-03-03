@@ -141,7 +141,7 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
 
     # Add the ) to the end
     res += ")"
-    print(res)
+    # print(res)
 
     # Output to file
     my_output_stream.write(res)
