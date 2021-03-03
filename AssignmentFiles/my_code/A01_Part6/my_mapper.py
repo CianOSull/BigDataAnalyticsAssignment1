@@ -130,21 +130,23 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
     # Output the result
     # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
     # station3_id) \n
-    for i in range(len(first_station_names)):
-        # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
-        # station3_id) \n
-        # res = "universal\t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + \
-        #       str(second_station_times[i]) + ", " + str(second_station_names[i]) + ")\n"
+    # if it is not empty, output
+    if 0 < len(first_station_names):
+        for i in range(len(first_station_names)):
+            # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
+            # station3_id) \n
+            # res = "universal\t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + \
+            #       str(second_station_times[i]) + ", " + str(second_station_names[i]) + ")\n"
+            # print(res)
+
+            res += str(first_station_times[i]) + " @ " + str(second_station_times[i]) + " @ " + str(first_station_names[i]) + " @ " + str(second_station_names[i])
+
+        # Add the ) to the end
+        res += ")"
         # print(res)
 
-        res += str(first_station_times[i]) + " @ " + str(second_station_times[i]) + " @ " + str(first_station_names[i]) + " @ " + str(second_station_names[i])
-
-    # Add the ) to the end
-    res += ")"
-    # print(res)
-
-    # Output to file
-    my_output_stream.write(res)
+        # Output to file
+        my_output_stream.write(res)
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
