@@ -106,7 +106,9 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
     # Output the result for the top n bikes (write n amount of lines)
     # bike_id \t (total_duration_time_for_their_trips, total_number_of_trips) \n
     for id in bike_id_duration:
-        res = str(id) + "\t(" + str(bike_id_duration[id]) + ", " + str(bike_id_trips[id]) + ")\n"
+        # universal	(33369, 2308, 1)
+        # res = str(id) + "\t(" + str(bike_id_duration[id]) + ", " + str(bike_id_trips[id]) + ")\n"
+        res = "universal\t(" + str(id) + ", " + str(bike_id_duration[id]) + ", " + str(bike_id_trips[id]) + ")\n"
 
         # Output to file
         my_output_stream.write(res)
