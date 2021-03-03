@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31b5ef61-2b51-4458-8ff8-61c0e5de22f3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part6/my_reducer.py" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_code/A01_Part6/my_reducer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/3_my_reduce_simulation/reduce_sort_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AssignmentFiles/my_results/A01_Part6/3_my_reduce_simulation/reduce_sort_1.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -88,7 +88,8 @@ def my_reduce(my_input_stream, my_output_stream, my_reducer_input_parameters):
     second_station_names = []
     second_station_times = []
 
-    prev_end_station = ""
+    prev_end_station_name = ""
+    prev_end_station_time = ""
 
     # For a line in that folder
     for line in my_input_stream:
@@ -101,15 +102,16 @@ def my_reduce(my_input_stream, my_output_stream, my_reducer_input_parameters):
 
             current_station = first_station_names[i]
 
-            if (len(prev_end_station) != 0) and prev_end_station != current_station:
+            if (len(prev_end_station_name) != 0) and prev_end_station_name != current_station:
                 # print(prev_end_station, ":", first_station_names[i])
 
-                res = "By_Truck \t(" + str(second_station_times[i-1]) + ", " + str(second_station_names[i-1]) + ", " + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ")\n"
+                res = "By_Truck \t(" + str(prev_end_station_time) + ", " + str(prev_end_station_name) + ", " + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ")\n"
 
                 # Output to file
                 my_output_stream.write(res)
 
-            prev_end_station = second_station_names[i]
+            prev_end_station_name = second_station_names[i]
+            prev_end_station_time = second_station_times[i]
 
         # for i in range(len(first_station_names)):
         #     # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
