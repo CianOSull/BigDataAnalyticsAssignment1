@@ -91,7 +91,7 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
     # (01) stop_time
 
     # Output variable
-    res = ""
+    res = "universal\t("
 
     # Using four lists to store the values because they can store duplicates.
     # Dictionaries can't store keys.
@@ -101,7 +101,7 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
     second_station_names = []
     second_station_times = []
 
-    # Set hte previous varibles to be nothing by default
+    # Set the previous varibles to be nothing by default
     prev_end_station_id = 0
     prev_end_station_log = 0
     prev_end_station_name = ""
@@ -133,12 +133,18 @@ def my_map(my_input_stream, my_output_stream, my_mapper_input_parameters):
     for i in range(len(first_station_names)):
         # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
         # station3_id) \n
-        res = "universal\t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + \
-              str(second_station_times[i]) + ", " + str(second_station_names[i]) + ")\n"
+        # res = "universal\t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + \
+        #       str(second_station_times[i]) + ", " + str(second_station_names[i]) + ")\n"
         # print(res)
 
-        # Output to file
-        my_output_stream.write(res)
+        res += str(first_station_times[i]) + " @ " + str(second_station_times[i]) + " @ " + str(first_station_names[i]) + " @ " + str(second_station_names[i])
+
+    # Add the ) to the end
+    res += ")"
+    print(res)
+
+    # Output to file
+    my_output_stream.write(res)
 
 # ---------------------------------------------------------------
 #           PYTHON EXECUTION
