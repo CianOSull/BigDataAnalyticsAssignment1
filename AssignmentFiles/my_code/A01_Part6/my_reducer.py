@@ -41,7 +41,9 @@ def process_line(line):
     second_station_names = []
     second_station_times = []
 
-    for i in range(len(line_info), 4):
+    for i in range(0, len(line_info), 4):
+        # print(line_info)
+        # print(line_info[i])
         first_station_times.append(line_info[i])
 
     for i in range(1, len(line_info), 4):
@@ -86,14 +88,38 @@ def my_reduce(my_input_stream, my_output_stream, my_reducer_input_parameters):
     second_station_names = []
     second_station_times = []
 
+    prev_end_station = ""
+
     # For a line in that folder
     for line in my_input_stream:
         # This should only run if the length of line is more than 13 characters because if it is,
         # then that means there is information in the line. If iti s only 13 then it is blank
         (first_station_times, second_station_times, first_station_names, second_station_names) = line_info = process_line(line)
 
+        for i in range(len(first_station_names)):
+            # print(first_station_names[i], ":", second_station_names[i])
 
+            current_station = first_station_names[i]
 
+            if (prev_end_station != "") and prev_end_station != current_station:
+                # print(prev_end_station, ":", first_station_names[i])
+
+                res = "By_Truck \t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + str(second_station_times[i]) + ", " + str(second_station_names[i]) + ")\n"
+
+                # Output to file
+                my_output_stream.write(res)
+
+            prev_end_station = second_station_names[i]
+
+        # for i in range(len(first_station_names)):
+        #     # By_Truck \t (time_it_was_logged_at_station2, station2_id, time_it_was_logged_at_station3,
+        #     # station3_id) \n
+        #     res = "By_Truck \t(" + str(first_station_times[i]) + ", " + str(first_station_names[i]) + ", " + \
+        #           str(second_station_times[i]) + ", " + str(second_station_names[i]) + ")\n"
+        #     # print(res)
+        #
+        #     # Output to file
+        #     my_input_stream.write(res)
 
 
 
