@@ -1,11 +1,10 @@
 # BigDataAnalyticsAssignment1
-First Assignment in Big Data Analytics Module.
+First Assignment in Big Data Analytics Module.<br /> 
 
-Description:
-Used Map Reduce Techniques in Python.
+Description:<br /> 
+Used Map Reduce Techniques in Python.<br /> 
 
-# BigDataAnalyticsAssignment2
- Second Project for Big Data Analytics module.<br />
+Code is located AssignmentFiles -> my_code
  
 ## Project specifiction:<br />
 **Tasks**:<br />
